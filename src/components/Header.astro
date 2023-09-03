@@ -1,0 +1,44 @@
+---
+import "@styles/global.css";
+---
+
+<section class="header">
+  <div class="name-and-title-wrapper">
+    <h1>Roni Jaakkola</h1>
+    <p class="job-title">UX designer</p>
+  </div>
+  <div class="description-and-cta-wrapper">
+    <p class="lead-paragraph">
+      A UX designer and design techologist who can comfortably attend a visual
+      design review and then hop into a meeting about technical frontend
+      architecture.
+    </p>
+    <a>Go there →</a>
+  </div>
+</section>
+
+<style>
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .name-and-title-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .job-title {
+    color: var(--color-text-secondary);
+    font-size: 2rem;
+  }
+
+  .description-and-cta-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 30rem;
+  }
+</style>

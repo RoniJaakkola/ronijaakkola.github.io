@@ -1,0 +1,48 @@
+---
+const { label, type, id, placeholder } = Astro.props;
+---
+
+<div class="input-wrapper">
+  <label for={id} class="input-label">{label}</label>
+  <input id={id} type={type} placeholder={placeholder} />
+</div>
+
+<style>
+  .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .input-label {
+    font-family: Manrope;
+    color: var(--color-text-secondary);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  input {
+    appearance: none;
+    background-color: var(--color-background-secondary);
+    font-family: "Instrument Sans";
+    font-size: 1rem;
+    color: var(--color-text-primary);
+    caret-color: var(--color-text-secondary);
+    border: 1px solid #4e4e4e;
+    padding: 0.5rem 0.5rem;
+    border-radius: 2px;
+    transition-property: border box-shadow;
+    transition-duration: 300ms;
+    transition-timing-function: var(--animation-timing);
+  }
+
+  input:hover {
+    border: 1px solid #838383;
+  }
+
+  input:focus {
+    border: 1px solid #838383;
+    box-shadow: 0 0 0 2px var(--color-focus);
+  }
+</style>

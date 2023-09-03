@@ -1,0 +1,40 @@
+---
+export interface Props {
+  title: string;
+  role: string;
+  time: string;
+}
+
+const { title, role, time } = Astro.props;
+---
+
+<div class="resume-item">
+  <h4>{title}</h4>
+  <div class="resume-item-description-wrapper">
+    <p class="resume-item-description">{role}</p>
+    <p>|</p>
+    <p class="resume-item-time">{time}</p>
+  </div>
+</div>
+
+<style>
+  .resume-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .resume-item-description-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    color: var(--color-text-secondary);
+  }
+
+  .resume-item-description {
+  }
+
+  .resume-item-time {
+    font-style: italic;
+  }
+</style>

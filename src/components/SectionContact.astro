@@ -1,0 +1,55 @@
+---
+import Section from "@layouts/Section.astro";
+
+import Input from "@components/Input.astro";
+import TextArea from "@components/TextArea.astro";
+
+import PlaceholderImg from "@assets/placeholder.webp";
+---
+
+<Section title="Contact">
+  <div class="contact-wrapper">
+    <p class="lead-paragraph contact-lead">
+      I’m always interested in hearing about new opportunities and projects. You
+      can contact me via email or with the form below.
+    </p>
+    <a class="contact-email">hello@roni.fi</a>
+    <form class="contact-form">
+      <div class="name-and-email-wrapper">
+        <Input id="name" label="Name" type="text" />
+        <Input id="email" label="Email" type="email" />
+      </div>
+      <Input id="subject" label="Subject" type="text" />
+      <TextArea id="message" label="Message" rows="6" />
+    </form>
+  </div>
+</Section>
+
+<style>
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact-lead {
+    font-size: 1.3rem;
+  }
+
+  .contact-email {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .name-and-email-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+</style>

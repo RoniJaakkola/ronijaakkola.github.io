@@ -1,0 +1,38 @@
+---
+import "@styles/global.css";
+
+import { Image } from "astro:assets";
+
+import Card from "@components/Card.astro";
+
+const { title, img, imgId, link } = Astro.props;
+---
+
+<Card>
+  <div class="project-card">
+    <Image
+      src={img}
+      alt="Alt text"
+      class="project-img"
+      transition:persist
+      transition:name={imgId}
+    />
+    <h3>{title}</h3>
+    <p><slot /></p>
+    <a href={link} data-astro-reload>Read case study →</a>
+  </div>
+</Card>
+
+<style>
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .project-img {
+    width: 100%;
+    height: auto;
+    border: var(--border-image);
+  }
+</style>

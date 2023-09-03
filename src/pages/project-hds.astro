@@ -1,0 +1,30 @@
+---
+import "@styles/global.css";
+
+import { Image } from "astro:assets";
+
+import Layout from "@layouts/Layout.astro";
+
+import PlaceholderImg from "@assets/placeholder.webp";
+
+const imgId = "project-1";
+---
+
+<Layout>
+  <h3>Helsinki Design System</h3>
+  <Image
+    src={PlaceholderImg}
+    alt="Alt text"
+    class="project-img"
+    transition:persist
+    transition:name={imgId}
+  />
+</Layout>
+
+<style>
+  .project-img {
+    width: 100%;
+    height: auto;
+    border: var(--border-image);
+  }
+</style>

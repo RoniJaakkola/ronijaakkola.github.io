@@ -1,0 +1,45 @@
+---
+import Section from "@layouts/Section.astro";
+import ProjectCard from "@components/ProjectCard.astro";
+
+import PlaceholderImg from "@assets/placeholder.webp";
+---
+
+<Section title="Work">
+  <div class="projects">
+    <ProjectCard
+      title="Helsinki Design System"
+      desc=""
+      img={PlaceholderImg}
+      imgId="project-1"
+      link="/project-hds"
+    >
+      A design system for the largest organisation in Finland
+    </ProjectCard>
+
+    <ProjectCard
+      title="Helsinki Design System"
+      img={PlaceholderImg}
+      imgId="project-2"
+      link="/project-hds"
+    >
+      A design system for the largest organisation in Finland
+    </ProjectCard>
+
+    <ProjectCard
+      title="Helsinki Design System"
+      img={PlaceholderImg}
+      imgId="project-3"
+      link="/project-hds"
+    >
+      A design system for the largest organisation in Finland
+    </ProjectCard>
+  </div>
+</Section>
+
+<style>
+  .projects {
+    display: flex;
+    gap: 2rem;
+  }
+</style>

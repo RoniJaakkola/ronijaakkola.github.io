@@ -1,0 +1,15 @@
+---
+import "@styles/global.css";
+---
+
+<div class="card">
+  <slot />
+</div>
+
+<style>
+  .card {
+    display: flex;
+    flex-grow: 1;
+    border-radius: var(--radius-border-card);
+  }
+</style>

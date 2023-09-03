@@ -1,0 +1,24 @@
+---
+import "@styles/global.css";
+
+import { Image } from "astro:assets";
+
+import Layout from "@layouts/Layout.astro";
+
+import Header from "@components/Header.astro";
+import SectionProjects from "@components/SectionProjects.astro";
+import SectionResume from "@components/SectionResume.astro";
+import SectionContact from "@components/SectionContact.astro";
+
+import PlaceholderImg from "@assets/placeholder.webp";
+---
+
+<Layout>
+  <Header />
+
+  <SectionProjects />
+
+  <SectionResume />
+
+  <SectionContact />
+</Layout>
