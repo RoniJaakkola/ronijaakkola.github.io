@@ -9,19 +9,24 @@ import PlaceholderImg from "@assets/placeholder.webp";
 
 <Section title="Contact">
   <div class="contact-wrapper">
-    <p class="lead-paragraph contact-lead">
-      I’m always interested in hearing about new opportunities and projects. You
-      can contact me via email or with the form below.
-    </p>
-    <a class="contact-email">hello@roni.fi</a>
-    <form class="contact-form">
-      <div class="name-and-email-wrapper">
-        <Input id="name" label="Name" type="text" />
-        <Input id="email" label="Email" type="email" />
-      </div>
-      <Input id="subject" label="Subject" type="text" />
-      <TextArea id="message" label="Message" rows="6" />
-    </form>
+    <div class="wrapper">
+      <p class="lead-paragraph contact-lead">
+        I’m always interested in hearing about new opportunities and projects.
+        You can contact me via email or with the form below.
+      </p>
+      <a class="contact-email">hello@roni.fi</a>
+    </div>
+    <div class="wrapper">
+      <h3>Contact form</h3>
+      <form class="contact-form">
+        <div class="name-and-email-wrapper">
+          <Input id="name" label="Name" type="text" />
+          <Input id="email" label="Email" type="email" />
+        </div>
+        <Input id="subject" label="Subject" type="text" />
+        <TextArea id="message" label="Message" rows="6" />
+      </form>
+    </div>
   </div>
 </Section>
 
@@ -29,7 +34,7 @@ import PlaceholderImg from "@assets/placeholder.webp";
   .contact-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.5rem;
   }
 
   .contact-lead {
@@ -39,6 +44,12 @@ import PlaceholderImg from "@assets/placeholder.webp";
   .contact-email {
     font-size: 1.3rem;
     font-weight: 400;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .contact-form {

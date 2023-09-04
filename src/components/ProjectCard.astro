@@ -14,12 +14,11 @@ const { title, img, imgId, link } = Astro.props;
       src={img}
       alt="Alt text"
       class="project-img"
-      transition:persist
       transition:name={imgId}
     />
     <h3>{title}</h3>
     <p><slot /></p>
-    <a href={link} data-astro-reload>Read case study →</a>
+    <a href={link}>Read case study →</a>
   </div>
 </Card>
 
