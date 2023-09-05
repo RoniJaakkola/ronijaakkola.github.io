@@ -11,14 +11,14 @@ const { label, type, id, placeholder } = Astro.props;
   .input-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: var(--spacing-s);
     width: 100%;
   }
 
   .input-label {
     font-family: Manrope;
     color: var(--color-text-secondary);
-    font-size: 1rem;
+    font-size: var(--font-size-s);
     font-weight: 600;
   }
 
@@ -26,11 +26,11 @@ const { label, type, id, placeholder } = Astro.props;
     appearance: none;
     background-color: var(--color-background-secondary);
     font-family: "Instrument Sans";
-    font-size: 1rem;
+    font-size: var(--font-size-s);
     color: var(--color-text-primary);
     caret-color: var(--color-text-secondary);
     border: 1px solid #4e4e4e;
-    padding: 0.5rem 0.5rem;
+    padding: var(--spacing-s) var(--spacing-s);
     border-radius: 2px;
     transition-property: border box-shadow;
     transition-duration: 300ms;

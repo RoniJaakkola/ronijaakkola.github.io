@@ -59,12 +59,16 @@ import Card from "./Card.astro";
 <style>
   .projects {
     display: flex;
-    gap: 2rem;
+    gap: var(--spacing-l);
+    flex-wrap: wrap;
+    @media (min-width: 640px) {
+      flex-wrap: nowrap;
+    }
   }
   .project-card {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: var(--spacing-m);
   }
 
   .project-img {

@@ -34,33 +34,38 @@ import PlaceholderImg from "@assets/placeholder.webp";
   .contact-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: var(--spacing-xl);
   }
 
   .contact-lead {
-    font-size: 1.3rem;
+    font-size: var(--font-size-l);
   }
 
   .contact-email {
-    font-size: 1.3rem;
+    font-size: var(--font-size-l);
     font-weight: 400;
   }
 
   .wrapper {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: var(--spacing-m);
   }
 
   .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: var(--spacing-m);
   }
 
   .name-and-email-wrapper {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: var(--spacing-m);
+    flex-wrap: wrap;
+
+    @media (min-width: 640px) {
+      flex-wrap: nowrap;
+    }
   }
 </style>

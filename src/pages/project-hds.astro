@@ -71,18 +71,22 @@ const imgId = "project-1-img";
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 4rem;
+    gap: var(--spacing-xl);
+
+    @media (min-width: 768px) {
+      gap: var(--spacing-2xl);
+    }
   }
   .project-header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 2rem;
+    gap: var(--spacing-l);
   }
   .project-title {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: var(--spacing-m);
   }
 
   .title-and-logo {
@@ -93,7 +97,7 @@ const imgId = "project-1-img";
   }
 
   .project-logo {
-    height: 2rem;
+    height: var(--spacing-l);
     width: auto;
   }
 
@@ -104,11 +108,16 @@ const imgId = "project-1-img";
   .project-info {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: var(--spacing-l);
+
+    @media (min-width: 640px) {
+      flex-wrap: nowrap;
+    }
   }
 
   .data-title {
-    font-size: 0.8rem;
+    font-size: var(--font-size-s);
     text-transform: uppercase;
     letter-spacing: 0px;
     color: var(--color-text-secondary);
@@ -118,8 +127,8 @@ const imgId = "project-1-img";
     flex: 1 1 0;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    padding: 1rem;
+    gap: var(--spacing-s);
+    padding: var(--spacing-m);
     background-color: var(--color-background-secondary);
     border-radius: var(--radius-border-card);
   }
@@ -134,6 +143,6 @@ const imgId = "project-1-img";
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 1rem;
+    gap: var(--spacing-m);
   }
 </style>

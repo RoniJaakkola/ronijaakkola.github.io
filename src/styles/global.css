@@ -12,7 +12,7 @@
 }
 
 html {
-  margin: 2rem;
+  margin: var(--spacing-l);
   padding: 0;
   background-color: var(--color-background-site);
   color: var(--color-text-primary);
@@ -22,7 +22,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: var(--spacing-body);
   margin: auto;
   padding: 0;
   max-width: 940px;
@@ -33,47 +33,54 @@ input:focus {
   outline: none;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  line-height: var(--line-height-heading);
+}
+
 h1 {
   font-family: Manrope;
   font-weight: 300;
-  font-size: 2.5rem;
+  font-size: var(--font-size-xl);
 }
 
 h2 {
   font-family: Manrope;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: var(--font-size-l);
 }
 
 h3 {
   font-family: Manrope;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: var(--font-size-m);
 }
 
 h4 {
   font-family: Manrope;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1var (--font-size-l);
 }
 
 p {
   font-family: Instrument Sans;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-body);
 }
 
 .lead-paragraph {
-  font-size: 1.5rem;
+  font-size: var(--font-size-m);
   color: var(--color-text-secondary);
 }
 
 a {
   font-family: Instrument Sans;
   font-weight: 600;
-  font-size: 1rem;
-  line-height: 1;
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-label);
   color: var(--color-link);
   text-decoration: underline;
 }
