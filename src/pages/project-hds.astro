@@ -28,18 +28,15 @@ const imgId = "project-1-img";
       <div class="project-info">
         <div class="project-data">
           <h2 class="data-title">Team</h2>
-          <p>5 people</p>
-          <p style="color: var(--color-text-secondary)">
-            1 product owner, 2 developers, 2 designers
-          </p>
+          <p class="data">1 product owner, 2 developers, 2 designers</p>
         </div>
         <div class="project-data">
           <h2 class="data-title">Skills</h2>
-          <p>Design systems, accessibility, UX/UI design</p>
+          <p class="data">Design systems, accessibility, UX/UI design</p>
         </div>
         <div class="project-data">
           <h2 class="data-title">Duration</h2>
-          <p>3/2019 — 8/2022</p>
+          <p class="data">3/2019 — 8/2022</p>
         </div>
       </div>
     </div>
@@ -91,13 +88,19 @@ const imgId = "project-1-img";
 
   .title-and-logo {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    gap: var(--spacing-m);
+
+    @media (min-width: 640px) {
+      flex-direction: row;
+      align-items: center;
+    }
   }
 
   .project-logo {
-    height: var(--spacing-l);
+    height: 2rem;
     width: auto;
   }
 
@@ -107,12 +110,11 @@ const imgId = "project-1-img";
 
   .project-info {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: var(--spacing-l);
 
     @media (min-width: 640px) {
-      flex-wrap: nowrap;
+      flex-direction: row;
     }
   }
 
@@ -120,6 +122,9 @@ const imgId = "project-1-img";
     font-size: var(--font-size-s);
     text-transform: uppercase;
     letter-spacing: 0px;
+  }
+
+  .data {
     color: var(--color-text-secondary);
   }
 
@@ -128,9 +133,6 @@ const imgId = "project-1-img";
     display: flex;
     flex-direction: column;
     gap: var(--spacing-s);
-    padding: var(--spacing-m);
-    background-color: var(--color-background-secondary);
-    border-radius: var(--radius-border-card);
   }
 
   .project-img {
