@@ -5,8 +5,6 @@ import Layout from "@layouts/Layout.astro";
 
 import PlaceholderImg from "@assets/placeholder.webp";
 import Logo from "@assets/helsinki-logo.png";
-
-const imgId = "project-1-img";
 ---
 
 <Layout>
@@ -45,7 +43,7 @@ const imgId = "project-1-img";
       src={PlaceholderImg}
       alt="Alt text"
       class="project-img"
-      transition:name={imgId}
+      transition:name="project-1-img"
     />
 
     <div class="project-story">
