@@ -1,0 +1,148 @@
+---
+import { Image } from "astro:assets";
+
+import Layout from "@layouts/Layout.astro";
+
+import PlaceholderImg from "@assets/placeholder.webp";
+import Logo from "@assets/helsinki-logo.png";
+---
+
+<Layout>
+  <div class="project">
+    <div class="project-header">
+      <div class="project-title">
+        <div class="title-and-logo">
+          <h1>Project 3</h1>
+          <Image src={Logo} alt="Alt text" class="project-logo" />
+        </div>
+        <p class="project-description">
+          The capital city and the largest organisation of Finland, City of
+          Helsinki, wanted to utilise the power of design systems to ensure
+          coherent and accessible digital solutions across the whole city.
+          Helsinki started a design system project from the ground up. I worked
+          on the project since its start for over 3 years.
+        </p>
+      </div>
+      <div class="project-info">
+        <div class="project-data">
+          <h2 class="data-title">Team</h2>
+          <p class="data">1 product owner, 2 developers, 2 designers</p>
+        </div>
+        <div class="project-data">
+          <h2 class="data-title">Skills</h2>
+          <p class="data">Design systems, accessibility, UX/UI design</p>
+        </div>
+        <div class="project-data">
+          <h2 class="data-title">Duration</h2>
+          <p class="data">3/2019 — 8/2022</p>
+        </div>
+      </div>
+    </div>
+
+    <Image
+      src={PlaceholderImg}
+      alt="Alt text"
+      class="project-img"
+      transition:name="project-3-img"
+    />
+
+    <div class="project-story">
+      <h2>Helsinki Design System</h2>
+      <p class="project-description">
+        The capital city and the largest organisation of Finland, City of
+        Helsinki, wanted to utilise the power of design systems to ensure
+        coherent and accessible digital solutions across the whole city.
+        Helsinki started a design system project from the ground up. I worked on
+        the project since its start for over 3 years.
+      </p>
+    </div>
+  </div>
+
+  <Image src={PlaceholderImg} alt="Alt text" class="project-img" />
+</Layout>
+
+<style>
+  .project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--spacing-xl);
+
+    @media (min-width: 768px) {
+      gap: var(--spacing-2xl);
+    }
+  }
+  .project-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--spacing-l);
+  }
+  .project-title {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-m);
+  }
+
+  .title-and-logo {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--spacing-m);
+
+    @media (min-width: 640px) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  .project-logo {
+    height: 2rem;
+    width: auto;
+  }
+
+  .project-description {
+    color: var(--color-text-secondary);
+  }
+
+  .project-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-l);
+
+    @media (min-width: 640px) {
+      flex-direction: row;
+    }
+  }
+
+  .data-title {
+    font-size: var(--font-size-s);
+    text-transform: uppercase;
+    letter-spacing: 0px;
+  }
+
+  .data {
+    color: var(--color-text-secondary);
+  }
+
+  .project-data {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-s);
+  }
+
+  .project-img {
+    width: 100%;
+    height: auto;
+    border: var(--border-image);
+  }
+
+  .project-story {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--spacing-m);
+  }
+</style>

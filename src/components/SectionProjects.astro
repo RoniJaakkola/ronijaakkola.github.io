@@ -7,52 +7,39 @@ import Section from "@layouts/Section.astro";
 import ProjectCard from "@components/ProjectCard.astro";
 
 import PlaceholderImg from "@assets/placeholder.webp";
+import PlaceholderImg2 from "@assets/placeholder.webp";
+import PlaceholderImg3 from "@assets/placeholder.webp";
 import Card from "./Card.astro";
 ---
 
 <Section title="Work">
   <div class="projects">
-    <Card>
-      <div class="project-card">
-        <Image
-          src={PlaceholderImg}
-          alt="Alt text"
-          class="project-img"
-          transition:name="project-1-img"
-        />
-        <h3>Helsinki Design System</h3>
-        <p>A design system for the largest organisation in Finland</p>
-        <a href="/project-hds">Read case study →</a>
-      </div>
-    </Card>
+    <ProjectCard
+      img={PlaceholderImg}
+      imgId="project-1-img"
+      title="Helsinki Design System"
+      link="/project-hds"
+    >
+      A design system for the largest organisation in Finland
+    </ProjectCard>
 
-    <Card>
-      <div class="project-card">
-        <Image
-          src={PlaceholderImg}
-          alt="Alt text"
-          class="project-img"
-          transition:name="project-2"
-        />
-        <h3>Helsinki Design System</h3>
-        <p>A design system for the largest organisation in Finland</p>
-        <a href="/project-hds">Read case study →</a>
-      </div>
-    </Card>
+    <ProjectCard
+      img={PlaceholderImg2}
+      imgId="project-2-img"
+      title="Project 2"
+      link="/project-2"
+    >
+      A design system for the largest organisation in Finland
+    </ProjectCard>
 
-    <Card>
-      <div class="project-card">
-        <Image
-          src={PlaceholderImg}
-          alt="Alt text"
-          class="project-img"
-          transition:name="project-3"
-        />
-        <h3>Helsinki Design System</h3>
-        <p>A design system for the largest organisation in Finland</p>
-        <a href="/project-hds">Read case study →</a>
-      </div>
-    </Card>
+    <ProjectCard
+      img={PlaceholderImg3}
+      imgId="project-3-img"
+      title="Project 3"
+      link="/project-3"
+    >
+      A design system for the largest organisation in Finland
+    </ProjectCard>
   </div>
 </Section>
 
